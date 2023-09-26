@@ -1,0 +1,365 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Rethouse - Real Estate HTML Template">
+    <meta name="keywords" content="Real Estate, Property, Directory Listing, Marketing, Agency" />
+    <meta name="author" content="mardianto - retenvi.com">
+    <title>PGHomes & Apartments - Real Estate Company in Abuja</title>
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <link rel="manifest" href="site.webmanifest">
+    <!-- favicon.ico in the root directory -->
+    
+    <link rel="apple-touch-icon" href=" {% static './images/icon1.png' %}">
+    <meta name="theme-color" content="#3454d1">
+    
+    <link href=" {% static './css/styles.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- NAVBAR TOP -->
+    <div class="topbar d-none d-sm-block">
+        <div class="container ">
+            <div class="row">
+                <div class="col-sm-12 col-md-5">
+                    <div class="topbar-left">
+                        <div class="topbar-text">
+                            {% now "D, M d, Y" %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-7">
+                    <div class="list-unstyled topbar-right">
+                        <ul class="topbar-link">
+                            <li><a href="#" title="">Career</a></li>
+                            <li><a href="{% url 'contact'%}" title="">Contact Us</a></li>
+                            <li><a href="#" title="">Login / Register</a></li>
+                        </ul>
+                        <ul class="topbar-sosmed">
+                            <li>
+                                <a href="www.facebook.com/propertyguidepgu"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="www.twitter.com/propertyguidepg"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END NAVBAR TOP -->
+
+<!-- HEADER -->
+<header class="header__style-one">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-hover navbar-expand-lg navbar-soft navbar-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home'  %}">
+
+
+                <img src=" {% static './images/PGHomes web Logo White.png' %}" alt="">
+                <img src=" {% static './images/PGHomes web Logo Black.png' %}" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav99">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main_nav99">
+                <ul class="navbar-nav mx-auto ">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" data-toggle="dropdown"> PGHomes </a>
+                        <ul class="dropdown-menu dropdown-menu-left animate fade-up">
+                            <!--<li><a class="dropdown-item" href="/homepage-v1.html"> Home version one </a>
+                            </li> -->
+                            <li><a class="dropdown-item" href="{% url 'about' %}"> About Us</a></li>
+                            <li><a class="dropdown-item" href="{% url 'gallery' %}"> Our Gallery </a></li>
+                            <li><a class="dropdown-item" href="{%  url 'contact' %}"> Our Contact</a></li>
+                            <li><a class="dropdown-item" href="#"> PG Blog </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Projects </a>
+                        <ul class="dropdown-menu animate fade-up">
+
+                            <li><a class="dropdown-item icon-arrow" href="{% url 'project_listing' %}"> View Projects</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" data-toggle="dropdown"> Products </a>
+                        <ul class="dropdown-menu dropdown-menu-left animate fade-up">
+                            <li><a class="dropdown-item" href="{% url 'product_listing' %}"> View Products </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" data-toggle="dropdown"> Investment </a>
+                        <ul class="dropdown-menu dropdown-menu-left animate fade-up">
+                            <li><a class="dropdown-item" href="{% url 'investment' %}"> View Investments </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+
+
+                <!-- Search bar.// -->
+                <ul class="navbar-nav ">
+                    <li>
+                        <a href="#" class="btn btn-primary text-capitalize">
+                            <i class="fa fa-plus-circle mr-1"></i> Download Brochure</a>
+                    </li>
+                </ul>
+                <!-- Search content bar.// -->
+                <div class="top-search navigation-shadow">
+                    <div class="container">
+                        <div class="input-group ">
+                            <form action="#">
+
+                                <div class="row no-gutters mt-3">
+                                    <div class="col">
+                                        <input class="form-control border-secondary border-right-0 rounded-0"
+                                            type="search" value="" placeholder="Search " id="example-search-input4">
+                                    </div>
+                                    <div class="col-auto">
+                                        <a class="btn btn-outline-secondary border-left-0 rounded-0 rounded-right"
+                                            href="/search-result.html">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Search content bar.// -->
+            </div> <!-- navbar-collapse.// -->
+        </div>
+    </nav>
+    <!-- END NAVBAR -->
+</header>
+<!-- END HEADER -->
+
+
+
+
+
+<div>
+    {% block content %}
+    {% endblock content %}
+</div>
+
+
+
+
+
+
+
+ <!-- Footer  -->
+ <footer>
+    <div class="wrapper__footer bg-theme-footer">
+        <div class="container">
+            <div class="row">
+                <!-- ADDRESS -->
+                <div class="col-md-4">
+                    <div class="widget__footer"> 
+                        <figure>
+                            <img src="{% static 'images/PGHomes web Logo White.png' %}" alt="" class="logo-footer">
+                        </figure>
+                        <p>
+                            PGHOMES & APARTMENT LTD, stands as the safest and fastest way to 
+                            shepherd people in property finding and shelter provision in Abuja and environs.  
+                        </p>
+
+                        <ul class="list-unstyled mb-0 mt-3">
+                            <li> <b> <i class="fa fa-map-marker"></i></b><span>3rd Floor, Upper Grace Plaza, Plot
+                                   217, Shettima Monguno Cresent, Utako Abuja, FCT </span> </li>
+                            <li> <b><i class="fa fa-phone-square"></i></b><span>(+234) 903-036-3777</span> </li>
+                            <li> <b><i class="fa fa-phone-square"></i></b><span>(+234) 817-338-4030</span> </li>
+                            <li> <b><i class="fa fa-headphones"></i></b><span>pghomesandapartments@gmail.com</span> </li>
+                            <li> <b><i class="fa fa-clock-o"></i></b><span>Mon - Fri / 9:00AM - 6:00PM</span> </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- END ADDRESS -->
+
+                <!-- QUICK LINKS -->
+                <div class="col-md-4">
+                    <div class="widget__footer">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <div class="link__category-two-column">
+                            <ul class="list-unstyled ">
+                                <li class="list-inline-item">
+                                    <a href="#">Commercial</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">Lands</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">PGHomes Abuja</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">Residential</a>
+                                </li>
+
+                                <li class="list-inline-item">
+                                    <a href="#">Mortgage</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">Smart City Hiltop</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">Signature Estate</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">Sterling Estate</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">Property Listing</a>
+                                </li>
+
+                                <li class="list-inline-item">
+                                    <a href="#">Lugbe</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">Ushafa bwari</a>
+                                </li>
+
+                                <li class="list-inline-item">
+                                    <a href="#">Kuje</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">Katampe Extension</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- END QUICK LINKS -->
+
+
+                <!-- NEWSLETTERS -->
+                <div class="col-md-4">
+                    <div class="widget__footer">
+                        <h4 class="footer-title">follow us </h4>
+                        <p class="mb-2">
+                            Follow us and stay in touch to get the latest news
+                        </p>
+                        <p>
+                            <button class="btn btn-social btn-social-o facebook mr-1">
+                                <a href="https://www.facebook.com/propertyguidepgu"><i class="fa fa-facebook-f"></i></a>
+                            </button>
+                            <button class="btn btn-social btn-social-o twitter mr-1">
+                                <a href="https://twitter.com/propertyguidepg"><i class="fa fa-twitter"></i><a/>
+                            </button>
+
+                            <button class="btn btn-social btn-social-o linkedin mr-1">
+                                <a href="https://www.linkedin.com/in/pghomes/">  <i class="fa fa-linkedin"></i></a>
+                            </button>
+                            <button class="btn btn-social btn-social-o instagram mr-1">
+                                <a href="https://www.instagram.com/propertyguidepg"> <i class="fa fa-instagram"></i></a>
+                            </button>
+
+                            <button class="btn btn-social btn-social-o youtube mr-1">
+                                <a href="https://www.youtube.com/channel/UCiwInfD7-4y3-nUzU6uScqA"> <i class="fa fa-youtube"></i></a>
+                            </button>
+                        </p>
+                        <br>
+                        <h4 class="footer-title">newsletter</h4>
+                        <!-- Form Newsletter -->
+                        <div class="widget__form-newsletter ">
+                            <p>
+
+                                Don’t miss to subscribe to our news feeds, kindly fill the form below
+                            </p>
+                            <div class="mt-3">
+                                <input type="text" class="form-control mb-2" placeholder="Your email address">
+
+                                <button class="btn btn-primary btn-block text-capitalize" type="button">subscribe
+
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- END NEWSLETTER -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="bg__footer-bottom-v1">
+        <div class="container">
+            <div class="row flex-column-reverse flex-md-row">
+                <div class="col-md-6">
+                    <span>
+                        © 2020 PGHomes and Apartment- Premium real estate & Investment by
+                        <a href="#">Property Guide</a>
+                    </span>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-inline ">
+                        <li class="list-inline-item">
+                            <a href="#">
+                                privacy
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="{% url 'contact' %}">
+                                contact
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="{% url 'about' %}">
+                                about
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">
+                                faq
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer  -->
+</footer>
+
+<!-- SCROLL TO TOP -->
+<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+<!-- END SCROLL TO TOP -->
+
+<script src=" {% static './js/index.bundle.js' %}"></script>
+</body>
+
+</html>

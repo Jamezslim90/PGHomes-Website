@@ -1,0 +1,548 @@
+
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+
+{% block content %}
+
+<!-- CAROUSEL -->
+<div class="slider-container">
+    <div class="container-slider-image-full  ">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators d-none">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">                  
+                <div class="carousel-item active banner-max-height">
+                    <img class="d-block w-100" src="{% static './images/pgb6.png' %}" alt="First slide">
+                    <div class="carousel-caption banner__slide-overlay d-flex h-100">
+                        <div class="carousel__content">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 col-md-12 col-sm-12 text-center">
+                                        <div class="slider__content-title ">
+                                            <h2 data-animation="fadeInDown" data-delay=".2s" data-duration="1000ms"
+                                                class="text-white animated fadeInDown">
+                                                Build your dream home with us!</h2>
+                                            <p data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms"
+                                                class="text-white animated fadeInUp">
+
+                                                Our first responsibility is to elevate your lifestyle. 
+                                            </p>
+                                            <a href="#" data-animation="fadeInUp" data-delay=".6s"
+                                                data-duration="1000ms"
+                                                class="btn btn-primary text-uppercase animated fadeInUp">
+                                                shedule a call
+                                                <i class="fa fa-angle-right arrow-btn "></i></a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item banner-max-height">
+                    <img class="d-block w-100" src="{% static './images/pgb1.png' %}" alt="Second slide">
+                    <div class="carousel-caption banner__slide-overlay d-flex h-100">
+                        <div class="carousel__content">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 col-md-12 col-sm-12 text-center">
+                                        <div class="slider__content-title ">
+                                            <h2 data-animation="animated fadeInDown"
+                                                class="text-white animated fadeInDown">
+                                                Hospitality begins at pghomes</h2>
+                                            <p data-animation="animated fadeInUp"
+                                                class="text-white animated fadeInUp ">
+
+                                            Stop the rent, own a home, ask us how.
+                                            </p>
+                                            <a href="#" class="btn btn-primary text-uppercase animated fadeInUp">
+                                                download free guide
+                                                <i class="fa fa-angle-right arrow-btn "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item banner-max-height">
+                    <img class="d-block w-100" src="{% static './images/pgb2.png' %}" alt="Third slide">
+                    <div class="carousel-caption banner__slide-overlay d-flex h-100">
+                        <div class="carousel__content">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 col-md-12 col-sm-12 text-center">
+                                        <div class="slider__content-title ">
+                                            <h2 data-animation="animated fadeInDown"
+                                                class="text-white animated fadeInDown">
+                                                Explore our Investment Plans</h2>
+                                            <p data-animation="animated fadeInUp"
+                                                class="text-white animated fadeInUp ">
+
+                                            All things properties from land to residential and commercial buildings.
+                                            </p>
+                                            <a href="{% url 'investment' %}" class="btn btn-primary text-uppercase animated fadeInUp">
+                                                view plans
+                                                <i class="fa fa-angle-right arrow-btn "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span> -->
+            <span class="carousel-control-nav-prev">
+                <i class="fa fa-2x fa-angle-left"></i>
+            </span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span> -->
+            <span class="carousel-control-nav-next">
+                <i class="fa fa-2x fa-angle-right"></i>
+            </span>
+        </a>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+<!-- END CAROUSEL -->
+<!-- END CAROSUEL -->
+    
+
+
+    <div class="clearfix"></div>
+
+
+    
+    <!-- ABOUT -->
+    <section class="home__about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="title__leading">
+                        <!-- <h6 class="text-uppercase">trusted By thousands</h6> -->
+                        <h2 class="text-capitalize" >Our value proposition</h2>
+                        <p>
+                            PGHOMES & APARTMENT LTD, stands for the safest way to 
+                            shepherd people in property finding and shelter provision. We help bridge the gap between people and 
+                            the government disbursed mortgage loans.
+                        </p>
+                        <p>
+                            We believe that no Nigerian should be left out regardless of their occupation and income.
+                        </p>
+                        <a href="{% url 'about' %}" class="btn btn-primary mt-3 text-capitalize"> read more
+                            <i class="fa fa-angle-right ml-3 "></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about__image">
+                        <div class="about__image-top">
+                            <div class="about__image-top-hover">
+                                <img src="{% static './images/pgb4.png'%}" alt="" class="img-fluid">
+                            </div>
+
+                        </div>
+                        <div class="about__image-bottom">
+                            <div class="about__image-bottom-hover">
+
+                                <img src="{% static './images/pgb5.png'%}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END ABOUT -->
+
+
+
+    <!-- MOST POPULAR PLACES -->
+    <section class="wrap__heading bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-6 mx-auto">
+                    <div class="title__head">
+                        <h2 class="text-center text-capitalize">
+                            some recent projects
+                        </h2>
+                        <p class="text-center text-capitalize">see our real estate investment projects in abuja.</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-xl-5 col-padd">
+                    <!-- CARD IMAGE -->
+
+                    <a href="{% url 'project_listing' %}">
+                        <div class="card__image-hover-style-v3">
+                            <div class="card__image-hover-style-v3-thumb h-475">
+                                <img src="{% static 'images/Lugbe.png' %}" alt="" class="img-fluid w-100">
+                            </div>
+                            <div class="overlay">
+                                <div class="desc">
+                                    <h6 class="text-capitalize">FHA Lugbe</h6>
+                                    <p class="text-capitalize">Signature Estate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-7 col-xl-7">
+                    <div class="row">
+                        <div class="col-md-6 col-padd">
+                            <!-- CARD IMAGE -->
+                            <a href="{% url 'project_listing' %}">
+                                <div class="card__image-hover-style-v3">
+                                    <div class="card__image-hover-style-v3-thumb h-230">
+                                        <img src="{% static 'images/Royal Garden Kuje.png' %}" alt="" class="img-fluid w-100">
+                                    </div>
+                                    <div class="overlay">
+                                        <div class="desc">
+                                            <h6 class="text-capitalize">Kuje</h6>
+                                            <p class="text-capitalize">Royal Garden Estate</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-padd">
+                            <!-- CARD IMAGE -->
+                            <a href="{% url 'project_listing' %}">
+                                <div class="card__image-hover-style-v3">
+                                    <div class="card__image-hover-style-v3-thumb h-230">
+                                        <img src="{% static 'images/Sterling Estate Kuje.png' %}" alt="" class="img-fluid w-100">
+                                    </div>
+                                    <div class="overlay">
+                                        <div class="desc">
+                                            <h6 class="text-capitalize">Kuje</h6>
+                                            <p class="text-capitalize">Sterling Estate</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-padd">
+                            <!-- CARD IMAGE -->
+                            <a href="{% url 'project_listing' %}">
+                                <div class="card__image-hover-style-v3">
+                                    <div class="card__image-hover-style-v3-thumb h-230">
+                                        <img src="{% static 'images/Ushafa Bwari.png' %}" alt="" class="img-fluid w-100">
+                                    </div>
+                                    <div class="overlay">
+                                        <div class="desc">
+                                            <h6 class="text-capitalize">Ushafa Bwari</h6>
+                                            <p class="text-capitalize">400 & 500sqm Land</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-padd">
+                            <!-- CARD IMAGE -->
+                            <a href="{% url 'project_listing' %}">
+                                <div class="card__image-hover-style-v3">
+                                    <div class="card__image-hover-style-v3-thumb h-230">
+                                        <img src="{% static 'images/Katampe Extension.png' %}" alt="" class="img-fluid w-100">
+                                    </div>
+                                    <div class="overlay">
+                                        <div class="desc">
+                                            <h6 class="text-capitalize">Katampe Extension</h6>
+                                            <p class="text-capitalize">500, 600 & 700sqm Land</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END MOST POPULAR PLACES -->
+
+    <!-- OUR CORE OFFERING -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-6 mx-auto">
+                    <div class="title__head">
+                        <h2 class="text-center text-capitalize">
+                            Our core Offerings
+                        </h2>
+                        <p class="text-center text-capitalize">We Think. Design. Develop.</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="testimonial owl-carousel owl-theme">
+                <!-- TESTIMONIAL -->
+                <div class="item testimonial__block">
+                    <div class="testimonial__block-card bg-reviews">
+                        <p>
+                            All things properties, ranging from land to residential and commercial building.
+                        </p>
+                    </div>
+                    <div class="testimonial__block-users">
+                        <div class="testimonial__block-users-img">
+                            <img src="{% static 'images/icon1.png' %}" alt="" class="img-fluid">
+                        </div>
+                        <div class="testimonial__block-users-name">
+                            Real Estate <br>
+                            <span>PGHomes & Apartments</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- END TESTIMONIAL -->
+                <!-- TESTIMONIAL -->
+                <div class="item testimonial__block">
+                    <div class="testimonial__block-card bg-reviews">
+                        <p>Enabling income earners access mortgage loans, to purchase their dream homes.
+                        </p>
+                    </div>
+                    <div class="testimonial__block-users">
+                        <div class="testimonial__block-users-img"> 
+                            <img src="{% static 'images/icon1.png' %}" alt="" class="img-fluid">
+                        </div>
+                        <div class="testimonial__block-users-name">
+                            Mortgage Finance <br>
+                            <span>PGHomes & Apartments</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- END TESTIMONIAL -->
+                <!-- TESTIMONIAL -->
+                <div class="item testimonial__block">
+                    <div class="testimonial__block-card bg-reviews">
+                        <p>
+                            As professional developers we never compromise on quality and delivery time.
+                        </p>
+                    </div>
+                    <div class="testimonial__block-users">
+                        <div class="testimonial__block-users-img">
+                            <img src="{% static 'images/icon1.png' %}" alt="" class="img-fluid">
+                        </div>
+                        <div class="testimonial__block-users-name">
+                            Developments <br>
+                            <span>PGHomes & Apartments</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- END TESTIMONIAL -->
+                <!-- TESTIMONIAL -->
+                <div class="item testimonial__block">
+                    <div class="testimonial__block-card bg-reviews">
+                        <p>
+                            We facilitate profiling, to enable private sector workers become Home owners,
+                             by benefiting from Federal Mortgage loans.
+                        </p>
+                    </div>
+                    <div class="testimonial__block-users">
+                        <div class="testimonial__block-users-img">
+                            <img src="{% static 'images/icon1.png' %}" alt="" class="img-fluid">
+                        </div>
+                        <div class="testimonial__block-users-name">
+                            Client Profiling <br>
+                            <span>PGHomes & Apartments</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- END TESTIMONIAL -->
+                <!-- TESTIMONIAL -->
+                <div class="item testimonial__block">
+                    <div class="testimonial__block-card bg-reviews">
+                        <p>
+                            Our skilled management service, sustain the value of property, preventing property depreciation.
+                        </p>
+                    </div>
+                    <div class="testimonial__block-users">
+                        <div class="testimonial__block-users-img">
+                            <img src="{% static 'images/icon1.png' %}" alt="" class="img-fluid">
+                        </div>
+                        <div class="testimonial__block-users-name">
+                            Facility Management <br>
+                            <span>PGHomes & Apartments</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- END TESTIMONIAL -->
+
+            </div>
+        </div>
+    </section>
+    <!-- END OUR CORE OFFERING -->
+
+    
+    
+
+
+    <!-- BRAND PARTNER -->
+    <section class="projects__partner bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="title__head">
+                        <h2 class="text-center text-capitalize">our partners</h2>
+                        <p class="text-center text-capitalize">Brand Partners Successful Projects Trusted Many Clients
+                            Real Estate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="projects__partner-logo">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item"> 
+                                <img src=" {% static 'images/Ministry_of_works.png' %}" alt="" class="img-fluid">
+                            </li>
+                            <li class="list-inline-item">
+                                <img src="{% static 'images/Mortgage.png' %}" alt="" class="img-fluid">
+                            </li>
+                            <li class="list-inline-item">
+                                <img src="{% static 'images/Sterling_Plaswall.png' %}" alt="" class="img-fluid">
+                            </li>
+                            <li class="list-inline-item">
+                                <img src="{% static 'images/Mortgage.png' %}" alt="" class="img-fluid">
+                            </li>
+                            <li class="list-inline-item">
+                                <img src="{% static 'images/Sterling_Plaswall.png' %}" alt="" class="img-fluid">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END BRAND PARTNER -->
+
+   
+   
+   <!-- INVESTMENT TABLE -->
+   <section class="wrap__heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-6 mx-auto">
+                <div class="title__head">
+                    <h2 class="text-center text-capitalize">
+                        Investment Plans
+                    </h2>
+                    <p class="text-center text-capitalize">Subscribe to our flexible investment plans.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- - - - - - - - - - - - - - Investment Table - - - - - - - - - - - - - - - - -->
+            <div class="col-md-6 col-sm-12 col-lg-3">
+                <div class="pricing-item">
+                    <h4 class="pricing-title">Bronze LandBanking</h4>
+                    <div class="pricing-price">
+                        <span class="pricing-anim pricing-anim-1">
+                            <span class="pricing-currency">N</span>20 
+                        </span>
+                        <span class="pricing-anim pricing-anim-2">
+                            <span class="pricing-period">Million  <i class="fa fa-arrow-up arrow-btn "></i></span>
+                        </span>
+                    </div>
+                    <ul class="pricing-feature-list">
+                        <li class="pricing-feature"><strong>15% Return on Investment For A Period of Six(6) Months</strong></li>
+                      <!-- 
+                            <li class="pricing-feature">Support at $25/hour</li>
+                        <li class="pricing-feature">Small social media package</li>
+                           -->
+                    </ul>
+                    <a href="{% url 'investment' %}" class="btn btn-primary btn-icon">view details <i class="fa fa-arrow-right arrow-btn "></i></a>
+                </div>
+            </div>
+            <div class="col-md-6  col-sm-12 col-lg-3">
+                <div class="pricing-item active">
+                    <h4 class="pricing-title">Silver LandBanking</h4>
+                    <div class="pricing-price">
+                        <span class="pricing-anim pricing-anim-1">
+                            <span class="pricing-currency">N</span>50
+                        </span>
+                        <span class="pricing-anim pricing-anim-2">
+                            <span class="pricing-period">Million <i class="fa fa-arrow-up arrow-btn "></i> </span>
+                        </span>
+                    </div>
+                    <ul class="pricing-feature-list">
+                        <li class="pricing-feature"><strong>30% Annual Return on Investment</strong></li>
+                        <!-- 
+                            <li class="pricing-feature">Support at $25/hour</li>
+                        <li class="pricing-feature">Small social media package</li>
+                           -->
+                    </ul>
+                    <a href="{% url 'investment' %}" class="btn btn-primary btn-icon">view details <i class="fa fa-arrow-right arrow-btn "></i></a>
+                </div>
+            </div>
+            <div class="col-md-6  col-sm-12 col-lg-3">
+                <div class="pricing-item">
+                    <h4 class="pricing-title">Gold Land Banking</h4>
+                    <div class="pricing-price">
+                        <span class="pricing-anim pricing-anim-1">
+                            <span class="pricing-currency">N</span>150
+                        </span>
+                        <span class="pricing-anim pricing-anim-2">
+                            <span class="pricing-period">Million <i class="fa fa-arrow-up arrow-btn "></i></span>
+                        </span>
+                    </div>
+                    <ul class="pricing-feature-list">
+                        <li class="pricing-feature"><strong>35% Annual Return on Investment</strong></li>
+                        <!-- 
+                            <li class="pricing-feature">Support at $25/hour</li>
+                        <li class="pricing-feature">Small social media package</li>
+                           -->
+                    </ul>
+                    <a href="{% url 'investment' %}" class="btn btn-primary btn-icon">view details <i class="fa fa-arrow-right arrow-btn "></i></a>
+                </div>
+            </div>
+            <div class="col-md-6  col-sm-12 col-lg-3">
+                <div class="pricing-item">
+                    <h4 class="pricing-title">Platinum LandBanking</h4>
+                    <div class="pricing-price">
+                        <span class="pricing-anim pricing-anim-1">
+                            <span class="pricing-currency">N</span>350
+                        </span>
+                        <span class="pricing-anim pricing-anim-2">
+                            <span class="pricing-period">Milion  <i class="fa fa-arrow-up arrow-btn "></i></span>
+                        </span>
+                    </div>
+                    <ul class="pricing-feature-list">
+                       
+                        <li class="pricing-feature"><strong>38% Annual Return on Investment</strong></li>
+                         <!-- 
+                            <li class="pricing-feature">Support at $25/hour</li>
+                        <li class="pricing-feature">Small social media package</li>
+                           -->
+                        
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-icon">view details <i class="fa fa-arrow-right arrow-btn "></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<!-- END INVESTMENT TABLE -->
+   
+{% endblock content %}
+
+
+    
+
+   

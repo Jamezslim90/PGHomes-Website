@@ -1,0 +1,22 @@
+{
+    "production": {
+        "aws_region": "us-west-2",
+        "django_settings": "PGHomes_website.settings",
+        "profile_name": "zappauser",
+        "project_name": "website",
+        "runtime": "python3.10",
+        "s3_bucket": "tempzappabucket",
+        "timeout_seconds": 900,
+        "manage_roles": false,
+        "role_name": "ZappaDjangoRole",
+        "role_arn":"arn:aws:iam::618940983337:role/ZappaDjangoRole",
+        "vpc_config" : {
+            "SubnetIds": ["subnet-007b3ed5956f1d16a", "subnet-06b4d2b780a96f55a", "subnet-03929c3b0a84458c8", "subnet-01fa85b31c26a9633"],
+            "SecurityGroupIds": ["sg-0715e86b5752d54b8"]
+        },
+        "certificate_arn": "arn:aws:acm:us-east-1:618940983337:certificate/b39e4ac4-1b7a-4df5-80be-7c21c1a01a5c",
+        
+        "domain": "pghomes.ng"
+        
+    }
+}

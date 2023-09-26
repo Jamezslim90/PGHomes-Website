@@ -1,0 +1,253 @@
+{% extends '../base.html' %}
+{% load static%}
+{% block title %}About Page {% endblock title %}
+
+{% block content %}
+
+<div class="slider-container">
+    <div class="container-slider-image-full  ">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators d-none">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">                  
+                <div class="carousel-item active banner-max-height " style=" height:550px">
+                    <img class="d-block w-100" src="{% static './images/pgb6.png' %}" alt="First slide">
+                    <div class="carousel-caption banner__slide-overlay d-flex h-100">
+                        <div class="carousel__content">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 col-md-12 col-sm-12 text-center">
+                                        <div class="slider__content-title " >
+                                            <h3 data-animation="fadeInDown" data-delay=".2s" data-duration="1000ms"
+                                                class="text-white animated fadeInDown">
+                                                PGHomes Investment</h3>
+                                            <p data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms"
+                                                class="text-white animated fadeInUp">
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+<!-- END CAROUSEL -->
+<!-- END CAROSUEL -->
+ <!-- OUR TEAM -->
+ <section class="our__team">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="title__head-v2">
+                    <h2 class="text-capitalize">
+                         Explore our Investment Packages
+                    </h2>
+                    <p class="text-capitalize">We have 4 juicy investment packages for you.</p>
+
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-6">
+                <div class="wrap-agent">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img alt="team member" class="img-fluid w-100" src="{% static './images/Katampe Extension.png'%}">
+                        </div>
+                        <div class="team-hover">
+                            <div class="desk">
+                                <h5>
+                                    Bronze Land Banking
+                                </h5>
+                                <p>
+                                    The bronze land banking plan is between 20-40 million at a 15% interest rate for a period of Six (6) months. Please note;
+                                    From 35-40 million, interest of 5% will be paid montly to the investor's account, within the period
+                                    of 5 months while 25 million is same but if allowed to be accumulate for 6 months, the investor gets
+                                    five hundred thousand added to the capital.
+                 
+                                    Please not that this incentive is only for those who will invest up to 35 million.
+                                </p>
+                                
+                                <a class="btn btn-primary" href="#">
+                                    Shedule a Call with us
+                                </a>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="team-title">
+                            <h6>
+                                Bronze Land Banking
+                            </h6>
+                            <span>
+                               15% ROI
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6">
+                <div class="wrap-agent">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img alt="team member" class="img-fluid w-100" src="{% static './images/pgb3.png'%}">
+                        </div>
+                        <div class="team-hover">
+                            <div class="desk">
+                                <h5>
+                                    Silver Land Banking
+                                </h5>
+                                <p>
+                                    The silver land banking project with the minimum su of 50 million naira and maximum of 100 million. This
+                                    investment plan is also known as a Silver Merger. The investment is for a period of 1 year with a roll
+                                    over to 2nd year at the investor's will.
+
+                                    At this level, investors can be merged to acieve a common objective. The return percentage of this
+                                    investment plan is at 30% interest in the first year and 35% in the second year if rolled over.
+                                    
+                                    Plus an instant benefit of owning a plot fo land for free in any of our Prime Estate.
+                                </p>
+                                <a class="btn btn-primary" href="#">
+                                    Shedule a Call with us
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <div class="team-title">
+                            <h6>
+                                Silver Land Banking
+                            </h6>
+                            <span>
+                                30% ROI
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+
+
+        </div>
+    </div>
+</section>
+<!-- END TEAM -->
+
+<section class="our__team">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-6">
+                <div class="wrap-agent">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img alt="team member" class="img-fluid w-100" src="{% static './images/pgb6.png'%}">
+                        </div>
+                        <div class="team-hover">
+                            <div class="desk">
+                                <h5>
+                                    Gold Land Banking
+                                </h5>
+                                <p>
+                                    The gold land banking investment project with the minimum sum of 150 million naira and maximum of 300 million.
+                                    This investment paln is also known as a Gold Merger. The investment is for a period of 1 year,
+                                    rollover enabled to a 2nd year at the investor's will.
+
+                                    Its percentage return is at 35% of interest at the initial year and 36% annually at the maturity 
+                                    of the investment.
+                                    Plus an instant benefit of ownig a land in our Prime Estates.
+                                </p>
+                                
+                                <a class="btn btn-primary" href="#">
+                                    Shedule a Call with us
+                                </a>
+                            </div>
+                        </div>
+                        <div class="team-title">
+                            <h6>
+                                Gold Land Banking
+                            </h6>
+                            <span>
+                                35% ROI
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6">
+                <div class="wrap-agent">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img alt="team member" class="img-fluid w-100" src="{% static './images/pgb2.png'%}">
+                        </div>
+                        <div class="team-hover">
+                            <div class="desk">
+                                <h5>
+                                    Platinum Land Banking
+                                </h5>
+                                <p>
+                                    The platinum investment project comes with a minimum sum of 350 Million naira and maximum of 1
+                                    Billion. This investment plan is also known as a Platinum Merger. The investment is for a period 
+                                    of 1 year, rollover enabled to a 2nd year and 3rd year up to 5 years at the investor's will.
+
+                                    Its percentage return is at 38% payable per annum.
+
+                                    Plus an instant benefit of owing a plot for free in any of our Prime Estates.
+                                </p>
+                               
+                                <a class="btn btn-primary" href="#">
+                                    Shedule a Call with us
+                                </a>
+                            </div>
+                           
+                        </div>
+                        <div class="team-title">
+                            <h6>
+                                Platinum Land Banking
+                            </h6>
+                            <span>
+                                38% ROI
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <div class="clearfix"></div>
+
+ 
+<!-- CALL TO ACTION -->
+<section class="cta-v1 py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-9">
+                <h2 class="text-uppercase text-white">Thinking about investing but not sure where to begin?</h2>
+                <p class="text-capitalize text-white"> Start by sheduling an advisory call.
+                </p>
+
+            </div>
+            <div class="col-lg-3">
+                <a href="#" class="btn btn-light text-uppercase ">Shedule A Call
+                    <i class="fa fa-angle-right ml-3 arrow-btn "></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END CALL TO ACTION -->
+{% endblock content %}

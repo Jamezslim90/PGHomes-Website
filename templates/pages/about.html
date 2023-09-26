@@ -1,0 +1,121 @@
+{% extends '../base.html' %}
+{% load static%}
+{% block title %}About Page {% endblock title %}
+
+{% block content %}
+
+<div class="slider-container">
+    <div class="container-slider-image-full  ">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators d-none">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">                  
+                <div class="carousel-item active banner-max-height " style=" height:550px">
+                    <img class="d-block w-100" src="{% static './images/pgb6.png' %}" alt="First slide">
+                    <div class="carousel-caption banner__slide-overlay d-flex h-100">
+                        <div class="carousel__content">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 col-md-12 col-sm-12 text-center">
+                                        <div class="slider__content-title " >
+                                            <h3 data-animation="fadeInDown" data-delay=".2s" data-duration="1000ms"
+                                                class="text-white animated fadeInDown">
+                                                About PGHomes</h3>
+                                            <p data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms"
+                                                class="text-white animated fadeInUp">
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+<!-- END CAROUSEL -->
+<!-- END CAROSUEL -->
+    
+
+
+    <div class="clearfix"></div>
+
+ <!-- ABOUT -->
+ <section class="home__about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="title__leading">
+                    <!-- <h6 class="text-uppercase">trusted By thousands</h6> -->
+                    <h2 class="text-capitalize" >Our vision and Mission</h2>
+                    <p> <strong>OUR VISION: </strong> Envisage a society with diverse world class innovative housing.
+                    </p>
+                    <p ><strong>OUR MISSION: </strong>
+                       To narrow the margin of housing needs by providing quality and affordable housing.
+                         
+                    </p>
+                    <p ><strong>OUR TEAM: </strong>
+                       Our Team is a network of professionals, close-knitted with diversified skills and expertise across various facets of real estate.
+                    </p>
+                    <a href="#" class="btn btn-primary mt-3 text-capitalize"> read more
+                        <i class="fa fa-angle-right ml-3 "></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about__image">
+                    <div class="about__image-top">
+                        <div class="about__image-top-hover">
+                            <img src="{% static './images/pgb4.png'%}" alt="" class="img-fluid">
+                        </div>
+
+                    </div>
+                    <div class="about__image-bottom">
+                        <div class="about__image-bottom-hover">
+
+                            <img src="{% static './images/pgb5.png'%}" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END ABOUT -->
+
+
+<!-- CALL TO ACTION -->
+<section class="cta-v1 py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-9">
+                <h2 class="text-uppercase text-white">About Us</h2>
+                <p class="text-capitalize text-white"> 
+                We are value driven, bringing aspiration to life as we continue to grow our vision of becoming the most oustanding  real estate with diverse innovative housing.
+                </p>
+                <p class="text-capitalize text-white mt-2">
+                At the core of the company's culture is quality service delivery, resilience, and  close client relationships. 
+                </p>
+                <p class="text-capitalize text-white mt-2">
+                PGHomes and Apartment Limited, is at the acme to using innovative technologies to reduce environmental impacts as we continue to deliver sustainable new homes thus, reducing housing deficit in Nigeria.
+                </p>
+                <p class="text-capitalize text-white mt-2">
+                Founded in 2018, by real estate veteran professional, with the passion to narrow the margin of housing needs, we are focused to making a differnce , unlocking potentials through partnerships, insight and innovations.
+                </p>
+            </div>
+            <div class="col-lg-3 px-5">
+                <a href="#" class="btn btn-light text-uppercase ">Call Now
+                    <i class="fa fa-angle-right ml-3 arrow-btn "></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END CALL TO ACTION -->
+{% endblock content %}

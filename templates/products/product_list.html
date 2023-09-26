@@ -1,0 +1,170 @@
+{% extends '../base.html' %}
+{% load static %}
+
+
+
+
+{% block content %}
+
+<div class="slider-container">
+    <div class="container-slider-image-full  ">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators d-none">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">                  
+                <div class="carousel-item active banner-max-height " style=" height:550px">
+                    <img class="d-block w-100" src="{% static './images/pgb6.png' %}" alt="First slide">
+                    <div class="carousel-caption banner__slide-overlay d-flex h-100">
+                        <div class="carousel__content">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8 col-md-12 col-sm-12 text-center">
+                                        <div class="slider__content-title " >
+                                            <h3 data-animation="fadeInDown" data-delay=".2s" data-duration="1000ms"
+                                                class="text-white animated fadeInDown">
+                                                PG Products </h3>
+                                            <p data-animation="fadeInUp" data-delay=".4s" data-duration="1000ms"
+                                                class="text-white animated fadeInUp">
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+<!-- END CAROUSEL -->
+<!-- END CAROSUEL -->
+    
+
+
+<!-- LISTING LIST -->
+<section>
+    <div class="container">
+        
+
+       
+        <div class="row">
+            <div class="col-lg-8">
+                
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tabs__custom-v2">
+                            <!-- FILTER VERTICAL -->
+                            
+                            
+                            
+                            {% for product in product_list %}
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="pills-tab-one" role="tabpanel"
+                                    aria-labelledby="pills-tab-one">
+                                    <a href="{% url 'product_detail' product.pk %}">
+                                    <div class="row">
+                                       
+                                        <div class="col-lg-12">
+                                            <div class="card__image card__box-v1">
+                                                <div class="row no-gutters">
+                                                    <div class="col-md-4 col-lg-3 col-xl-4">
+                                                        <div class="card__image__header h-250">
+                                                            <a href="{% url 'product_detail' product.pk %}">
+                                                                <div class="ribbon text-capitalize">{{ product.sales }}</div>
+                                                           
+                                                                <a href='{{ product.image.url}}'> 
+                                                                    <img src="{{product.image.url}}" alt=""
+                                                                    class="img-fluid w100 img-transition">
+                                                                    </a>
+                                                                
+                                                                <div class="info"> for sale</div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-lg-6 col-xl-5 my-auto">
+                                                        <div class="card__image__body">
+
+                                                            <span
+                                                                class="badge badge-primary text-capitalize mb-2">{{ product.type }}</span>
+                                                            <h6>
+                                                                <a href="{% url 'product_detail' product.pk %}">{{ product.name }}</a>
+                                                            </h6>
+                                                            <div class="card__image__body-desc">
+                                                                <!-- <p class="text-capitalize">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, alias!
+
+                </p> -->
+                                                                <p class="text-capitalize">
+                                                                    <i class="fa fa-map-marker"></i>
+                                                                    {{ product.location }}
+                                                                </p>
+                                                            </div>
+
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="col-md-4 col-lg-3 col-xl-3 my-auto card__image__footer-first">
+                                                        <div class="card__image__footer">
+                                                            
+                                                            <ul class="list-inline my-auto">
+                                                                <li class="list-inline-item name">
+                                                                   
+                                                                        Available unit
+                                                                    
+
+                                                                </li>
+
+
+                                                            </ul>
+                                                            <ul class="list-inline my-auto ml-auto price">
+                                                                <li class="list-inline-item ">
+
+                                                                    <h6>{{ product.available_units }}</h6>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    </a>
+
+                                    <div class="cleafix"></div>
+                                </div>
+                        
+                            </div>
+                        
+                            {% endfor %} 
+                            <!-- END FILTER VERTICAL -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+  
+         
+        <div class="cleafix"></div>
+
+    </div>
+</section>
+<!-- END LISTING LIST -->
+
+
+
+
+
+
+
+{% endblock content %}
