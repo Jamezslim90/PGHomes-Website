@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-awdg7o0p_v2n^&kxrl^3)ni_80jamccuuu61!4(tia8737t(fo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*", ".vercel.app", ".now.sh", "pghomes.ng", "www.pghomes.ng"]
 
@@ -75,11 +75,23 @@ WSGI_APPLICATION = 'PGHomes_website.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'pghomes',
+    'USER': 'jamezslim90',
+    'PASSWORD': 'zmgHh7aNwQk9',
+    'HOST': 'ep-cold-leaf-25567838.us-west-2.aws.neon.tech',
+    'PORT': '5432',
+  }
 }
 
 # Railway Postgres DataBase
@@ -149,7 +161,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 MEDIA_URL = '/media/' # new
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # new
 
