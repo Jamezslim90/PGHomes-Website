@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-awdg7o0p_v2n^&kxrl^3)ni_80jamccuuu61!4(tia8737t(fo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*", ".vercel.app", ".now.sh", "pghomes.ng", "www.pghomes.ng"]
 
@@ -32,7 +32,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'easy_thumbnails',
     'django_s3_storage',
-    'zappa_django_utils'
+    'zappa_django_utils',
+     "django_minify_html"
 
 ]
 
@@ -45,6 +46,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+     "django_minify_html.middleware.MinifyHtmlMiddleware",
 
 ]
 
@@ -160,8 +162,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 MEDIA_URL = '/media/' # new
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # new
 
@@ -205,9 +209,10 @@ JAZZMIN_SETTINGS = {
 # UserUpload images Settings
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# aws_access_key_id = 'AKIAZAG6B5AUXJYLRPUB'
-# aws_secret_access_key = '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'
-AWS_STORAGE_BUCKET_NAME = 'pghomes-static-bucket'
+
+AWS_ACCESS_KEY_ID = 'AKIA5WSB2IR7BNA3LW7X'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'django-cat-bucket'
 AWS_QUERYSTRING_AUTH = False
 AWS_SECURITY_TOKEN_IGNORE_ENVIRONMENT = True
 AWS_IGNORE_ENVIRONMENT_CREDENTIALS = True
